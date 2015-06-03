@@ -1,0 +1,29 @@
+{{extend 'layout.html'}}
+
+<div id="nav2">
+<h3>Lista Completa de Ramais</h3>
+<table style="width:50%">
+<tr>
+	<td><pre><b>NOME</b></pre></td>
+	<td><pre><b>DEPARTAMENTO</b></pre></td>
+	<td><pre><b>RAMAL</b></pre></td>
+</tr>
+{{for i in todos_ramais:}}
+
+  <tr>
+    <td><pre>{{=i.nome}}</pre></td>
+    <td><pre>{{=i.depto}}</pre></td>
+    <td><pre>{{=i.ramal}}</pre></td>	
+  </tr>
+<!-- <pre><b>Nome:</b> {{=i.nome}}&#09;&#09;&#09;&#09;&#09;&#09;<b>Ramal:</b> {{=i.ramal}}</pre> -->
+
+{{pass}}
+
+</table>
+</div>
+
+
+
+
+
+

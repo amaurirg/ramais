@@ -1,0 +1,33 @@
+{{extend 'layout.html'}}
+
+
+<!-- {{=form}} -->
+
+
+
+<div id="nav">
+<h4><b>{{=response.flash}}</b></h4><br />
+{{=form}}
+
+{{for i in num_ramal:}}
+<ul>
+    <li><a href="{{=URL('atualizar_ramal', args=i.id)}}"><b>Nome:</b> {{=i.nome}}<br /><b>Departamento: </b>{{=i.depto}}<br /><b>Ramal:</b> {{=i.ramal}}</a></li>
+</ul>
+{{pass}}
+
+<br />
+<dl>
+    <dt><a href="{{=URL('lista_completa_de_ramais')}}">Ver Lista Completa de Ramais</a></dt>
+    <dt><a href="{{=URL('novo_ramal')}}">Cadastrar Novo Ramal</a></dt>
+    <!-- <dt><a href="{{=URL('atualizar_ramal')}}">Atualizar Ramal</a></dt> -->
+</dl>
+</div>
+
+<div id="section">
+	<p>Esta é uma ferramenta para consulta de ramais.<br />
+	É um simples projeto que serve para ajudar iniciantes em web2py.<br />
+	Cadastre ramais no banco de dados utilizando "Cadastrar Novo Ramal".<br />
+	Altere os ramais consultando-os e depois clicando sobre o ramal a ser alterado.<br />
+	Depois consulte-os em "Ver a Lista Completa de Ramais".
+	</p>
+</div>
